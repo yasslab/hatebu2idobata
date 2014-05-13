@@ -12,9 +12,9 @@ Bring notification in [Hatebu](http://b.hatena.ne.jp/) to [Idobata](http://idoba
 
 ## How to setup
 
-1. Set environment variables: 
+1. Set environment variables:
 	- `IDOBATA_END` for Idobata Generic Hook token
-    - Command Example: `heroku config:add HIPCHAT_API_TOKEN=hogehogefoobar"`
+    - Command Example: `heroku config:add IDOBATA_END=YOUR_IDOBATA_HOOK_URL_HERE"`
 2. `heroku create; git push heroku master`
 3. `heroku addons:add scheduler`
 4. Test: `heroku run bundle exec ruby hatebu2idobata.rb`
@@ -33,4 +33,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
