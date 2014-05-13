@@ -17,10 +17,9 @@ HATEBU_USERS.each { |user|
 
   rss = RSS::Parser.parse("http://b.hatena.ne.jp/#{user}/rss")
 
-  # NOTE: Heroku Scheduler should be set to "Every 10 minutes"
-  now = Time.now
+  # NOTE: Heroku Scheduler's frequency should be set to "Hourly"
   bookmarks = rss.items.select do |item|
-    (now - item.date) / 60 <= 10
+    (Time.now - item.date) / 60 <= 60
   end
 
   msg << bookmarks.map {|b|
