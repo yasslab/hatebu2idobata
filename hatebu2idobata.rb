@@ -12,6 +12,9 @@ HATEBU_USERS = [
 
 msg = ""
 HATEBU_USERS.each { |user|
+  # Flush cache RSS before downloading
+  `curl -H 'Pragma: no-cache' -L b.hatena.ne.jp/yasulabs/rss`
+
   rss = RSS::Parser.parse("http://b.hatena.ne.jp/#{user}/rss")
 
   # NOTE: Heroku Scheduler should be set to "Every 10 minutes"
