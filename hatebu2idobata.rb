@@ -21,7 +21,7 @@ HATEBU_USERS.each { |user|
   end
 
   msg << bookmarks.map {|b|
-    p "<a href=''#{b.link}'>#{b.title}</a> by <span class='label'>#{b.dc_creator}</span><br /> <b>#{b.description}<b/>"
+    p "<a href='#{b.link}'>#{b.title}</a> by <span class='label'>#{b.dc_creator}</span><br /> <b>#{b.description}<b/>"
   }.join("<br/>")
 }
 
