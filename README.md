@@ -13,13 +13,15 @@ Bring notification in [Hatebu](http://b.hatena.ne.jp/) to [Idobata](http://idoba
 ## How to setup
 
 1. Set environment variables: 
-	- `IDOBATA_END` for Idobata Generic Hook token
+    - `IDOBATA_END` for Idobata Generic Hook token
     - Command Example: `heroku config:add HIPCHAT_API_TOKEN=hogehogefoobar"`
 2. `heroku create; git push heroku master`
 3. `heroku addons:add scheduler`
 4. Test: `heroku run bundle exec ruby hatebu2idobata.rb`
 5. Add a job to [Heroku Scheduler](https://scheduler.heroku.com/dashboard)
-   ![Heroku Scheduler](https://dl.dropboxusercontent.com/u/2819285/hipchat2idobata_heroku-scheduler.png)
+   - Task: `bundle exec ruby hatebu2idobata.rb`
+   - Dyno Size: `1x`
+   - Frequency: `Hourly`
 6. Done!
 
 ## License
