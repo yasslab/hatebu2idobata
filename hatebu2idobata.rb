@@ -7,7 +7,7 @@ require 'idobata'
 Idobata.hook_url = ENV['IDOBATA_END']
 HATEBU_USERS = [
   #"yasulabs",
-  "yasslab",
+  "YassLab",
   #"h6n"
 ]
 
