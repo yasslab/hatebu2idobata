@@ -6,16 +6,14 @@ require 'idobata'
 
 Idobata.hook_url = ENV['IDOBATA_END']
 HATEBU_USERS = [
-  #"yasulabs",
   "YassLab",
-  #"h6n"
+  # "Other Username"
 ]
 
 msg = ""
 HATEBU_USERS.each { |user|
   # Flush cache RSS before downloading
-  #`curl -H 'Pragma: no-cache' -L b.hatena.ne.jp/yasulabs/rss`
-  `curl -H 'Pragma: no-cache' -L b.hatena.ne.jp/yasslab/rss`
+  `curl -H 'Pragma: no-cache' -L b.hatena.ne.jp/#{user}/rss`
 
   rss = RSS::Parser.parse("http://b.hatena.ne.jp/#{user}/rss")
 
