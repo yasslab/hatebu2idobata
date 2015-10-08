@@ -14,7 +14,7 @@ Bring notification in [Hatebu](http://b.hatena.ne.jp/) to [Idobata](http://idoba
 
 1. Set environment variables: 
     - `IDOBATA_END` for Idobata Generic Hook token
-    - Command Example: `heroku config:add HIPCHAT_API_TOKEN=hogehogefoobar"`
+    - Command Example: `heroku config:add IDOBATA_END=hogehogefoobar"`
 2. `heroku create; git push heroku master`
 3. `heroku addons:add scheduler`
 4. Test: `heroku run bundle exec ruby hatebu2idobata.rb`
@@ -23,10 +23,6 @@ Bring notification in [Hatebu](http://b.hatena.ne.jp/) to [Idobata](http://idoba
    - Dyno Size: `1x`
    - Frequency: `Hourly`
 6. Done!
-
-## License
-
-Sample script to sign in Doorkeeper using Capybara
 
 ## License 
 
