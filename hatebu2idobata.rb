@@ -25,7 +25,7 @@ HATEBU_USERS.each { |user|
 
   # NOTE: Heroku Scheduler's frequency should be set to "Every 10 minutes"
   bookmarks = rss.items.select do |item|
-    (Time.now - item.date) / 60 <= 1000
+    (Time.now - item.date) / 60 <= 10
   end
 
   msg << bookmarks.map {|b|
