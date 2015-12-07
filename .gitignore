@@ -1,5 +1,6 @@
 *.rss
 .envrc
+*.rss
 *~
 *.pyc
 *#
