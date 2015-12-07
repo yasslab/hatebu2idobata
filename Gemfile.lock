@@ -16,6 +16,8 @@ DEPENDENCIES
   idobata
   simple-rss
 
+RUBY VERSION
+   ruby 2.4.2p198
+
 BUNDLED WITH
    1.10.6
->>>>>>> Use feedjira instead of RSS to adapt Atom
