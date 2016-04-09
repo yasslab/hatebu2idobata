@@ -4,5 +4,3 @@ ruby '2.2.2'
 
 gem 'idobata'
 gem 'simple-rss'
-
-

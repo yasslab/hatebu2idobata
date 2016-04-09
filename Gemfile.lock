@@ -12,5 +12,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  feedjira
   idobata
   simple-rss
+
+BUNDLED WITH
+   1.10.6
+>>>>>>> Use feedjira instead of RSS to adapt Atom
