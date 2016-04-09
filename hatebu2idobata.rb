@@ -20,8 +20,8 @@ HATEBU_USERS.each { |user|
   rss = RSS::Parser.parse("./hatebu.rss")
 
   # NOTE: Heroku Scheduler's frequency should be set to "Every 10 minutes"
-  bookmarks = feed.entries.select do |item|
-    (Time.now - item.published) / 60 <= 10
+  bookmarks = feed.entries.select do |entry|
+    (Time.now - entry.published) / 60 <= 10
   end
 
   msg << bookmarks.map {|b|
