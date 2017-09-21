@@ -3,8 +3,6 @@
 
 require 'rss'
 require 'idobata'
-#require 'simple-rss'
-#require 'open-uri'
 
 Idobata.hook_url = ENV['IDOBATA_END']
 HATEBU_USERS = [
@@ -29,7 +27,7 @@ HATEBU_USERS.each { |user|
   end
 
   msg << bookmarks.map {|b|
-    p "<a href='#{b.link}'>#{b.title}</a> by <span class='label label-info'>#{user}</span><br /> <b>#{b.description}<b/>"
+    p "<a href='#{b.link}'>#{b.title}</a> by <span class='label label-info'>#{user}</span><br /> <b>#{b.description}</b>"
   }.join("<br/>")
 }
 
