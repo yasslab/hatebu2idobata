@@ -12,12 +12,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  feedjira
   idobata
   simple-rss
-
-RUBY VERSION
-   ruby 2.4.2p198
-
-BUNDLED WITH
-   1.10.6
