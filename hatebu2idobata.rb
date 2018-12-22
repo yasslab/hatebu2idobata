@@ -14,8 +14,8 @@ HATEBU_USERS = [
 msg = ""
 HATEBU_USERS.each { |user|
   # Flush cache RSS before downloading
-  `curl -H 'Pragma: no-cache' -L b.hatena.ne.jp/#{user}/rss`
-  `curl -o 'hatebu.rss' b.hatena.ne.jp/YassLab/rss`
+  `curl -H 'Pragma: no-cache' -L b.hatena.ne.jp/#{user}/bookmark.rss`
+  `curl -o 'hatebu.rss' b.hatena.ne.jp/#{user}/bookmark.rss`
   rss = RSS::Parser.parse("./hatebu.rss")
 
   #rss = RSS::Parser.parse("http://b.hatena.ne.jp/#{user}/rss")
