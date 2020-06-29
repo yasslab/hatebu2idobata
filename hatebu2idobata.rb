@@ -16,9 +16,9 @@ HATEBU_USERS.each { |user|
   # Flush cache RSS before downloading
   `curl -H 'Pragma: no-cache' -L b.hatena.ne.jp/#{user}/bookmark.rss`
   `curl -o 'hatebu.rss' b.hatena.ne.jp/#{user}/bookmark.rss`
-  rss = RSS::Parser.parse("./hatebu.rss")
+  #rss = RSS::Parser.parse("./hatebu.rss")
+  rss = RSS::Parser.parse("http://b.hatena.ne.jp/#{user}/rss")
 
-  #rss = RSS::Parser.parse("http://b.hatena.ne.jp/#{user}/rss")
   #rss = Feedjira::Feed.fetch_and_parse("http://b.hatena.ne.jp/#{user}/rss")
   #rss = SimpleRSS.parse("http://b.hatena.ne.jp/#{user}/rss")
   #binding.pry
@@ -32,4 +32,5 @@ HATEBU_USERS.each { |user|
   }.join("<br/>")
 }
 
-Idobata::Message.create(source: msg, format: :html) unless msg.empty?
+puts msg
+#Idobata::Message.create(source: msg, format: :html) unless msg.empty?
