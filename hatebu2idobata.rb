@@ -32,5 +32,5 @@ HATEBU_USERS.each { |user|
   }.join("<br/>")
 }
 
-puts msg
-#Idobata::Message.create(source: msg, format: :html) unless msg.empty?
+#puts msg
+Idobata::Message.create(source: msg, format: :html) unless msg.empty?
